@@ -1,39 +1,41 @@
 <template>
-<transition  name="el-zoom-in-center"  appear>
-  <div id="app">
-    <el-row type="flex">
-      <el-col :span="2"></el-col>
-      <el-col :span="8" >
-        <transition name="el-zoom-in-center">
-          <div class="el-zoom-in-center" id = 'index1' v-show='show' v-on:click = 'fn'>
-              <div >  <a href='#'><img src='./assets/index1.jpg' > </a> </div> 
-          </div>
-        </transition>
-      </el-col>
-
-      <el-col :span="8" >
-        <transition name="el-zoom-in-top">
-          <div class="grid-content bg-purple-light" id = 'index1' v-show='show' v-on:click = 'fn'>
-              <div >  <a href='#'><img src='./assets/index2.jpg' > </a> </div> 
-          </div>
-        </transition>
-      </el-col>
-
-      <el-col :span="8" >
-        <transition name="el-zoom-in-center">
-          <div class="grid-content bg-purple-light" id = 'index1' v-show='show' v-on:click = 'fn'>
-              <div >  <a href='#'><img src='./assets/index3.jpg' > </a> </div> 
-          </div>
-        </transition>
-      </el-col>
-      
-      <el-col :span="2"></el-col>
-    </el-row>
-  </div>
-</transition>
+<div>
+  <login></login>
+  <vue-particles style="z-index:-1;position:fixed;height:100%;width:100%"></vue-particles>
+  <transition  name="el-zoom-in-center"  appear>
+    <div id='app'>
+      <el-row type="flex">
+        <el-col :span="2"></el-col>
+        <el-col :span="8" >
+          <transition name="el-zoom-in-center">
+            <div class="el-zoom-in-center" id = 'index1' v-show='show' v-on:click = 'fn'>
+                <div >  <a href=''><img src='./assets/index1.jpg' > </a> </div> 
+            </div>
+          </transition>
+        </el-col>
+        <el-col :span="8" >
+          <transition name="el-zoom-in-top">
+            <div class="grid-content bg-purple-light" id = 'index1' v-show='show' v-on:click = 'fn'>
+                <div >  <a href=''><img src='./assets/index2.jpg' > </a> </div> 
+            </div>
+          </transition>
+        </el-col>
+        <el-col :span="8" >
+          <transition name="el-zoom-in-center">
+            <div class="grid-content bg-purple-light" id = 'index1' v-show='show' v-on:click = 'fn'>
+                <div >  <a href=''><img src='./assets/index3.jpg' > </a> </div> 
+            </div>
+          </transition>
+        </el-col>
+        <el-col :span="2"></el-col>
+      </el-row>
+    </div>
+  </transition>
+</div>
 </template>
 
 <script>
+import login from './components/login';
 export default {
   name: 'App',
   data: function(){
@@ -47,7 +49,8 @@ export default {
       this.show = !this.show;
     }
   },
-  components: {
+  components :{
+    login
   }
 }
 </script>
@@ -61,7 +64,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
   padding: auto;
   background-repeat: no-repeat;
   box-shadow: 2px 2px 4px 0 #000;
